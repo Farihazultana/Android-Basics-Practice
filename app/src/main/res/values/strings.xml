@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Basic - RecyclerView</string>
+    <string name="city_name">City Name</string>
+</resources>
