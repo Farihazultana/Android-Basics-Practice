@@ -1,6 +1,8 @@
 package com.example.androidbasic_recyclerview;
 
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -21,16 +23,19 @@ public class CustomAdapter extends RecyclerView.Adapter<MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View v = LayoutInflater.from(c).inflate(R.layout.row_item,parent,false);
+        MyViewHolder VH = new MyViewHolder(v);
+
+        return VH;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.cityName.setText(CityNames.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return CityNames.size();
     }
 }
