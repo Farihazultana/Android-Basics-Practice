@@ -11,10 +11,9 @@ import com.example.androidbasic_recyclerview.databinding.RowItemBinding;
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
     TextView cityName;
-    RowItemBinding binding_row;
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
-        cityName = binding_row.cityID;
+        cityName = (TextView)itemView.findViewById(R.id.cityID);
     }
 }
